@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Este es un comentario en css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/*GENERALES*/
+/*pROBA CAMBIAR EL DE ABAJO POR :root, que hace todo como por "raiz"*/
+
+p,
+a,
+label,
+ul,
+input,
+select,
+button {
+    font-family: Montserrat;
+}
+
+h1 {
+    color: #0d5494;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #0b2942;
+    ;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #141d25;
+}
+
+.button {
+    background-color: rgb(244, 245, 247);
+    border: 1px solid #141d25;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: .5rem;
+    text-align: center;
+}
+
+.button a {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: #141d25;
+    ;
+}
+
+/* main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+} */
+
+/*SECCION HEADER*/
+header {
+    background-color: #dae5ef;
+    align-items: center;
+
+    justify-content: space-between;
+    /*Logo a la derecha, nav a la izquierda*/
+
+    position: sticky;
+    /*Este jutno con el top de abajo hacen que el header quede fijo, cool*/
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.elementos-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+
+    justify-content: space-between;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+}
+
+.navegacion-principal {
+    /*S - E - R*/
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 1rem;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color: #0d5494;
+}
+
+.logo-hotel {
+    width: 4rem;
+    height: auto;
+    margin: 0 1rem;
+}
+
+.titulo-principal {
+    margin-bottom: 0;
+}
+
+.container-fluid {
+    flex-direction: row-reverse;
+}
+
+.menu {
+    width: 100%;
+}
+
+
+
+
+/*SECCION - FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    margin: 10px 0 0 0;
+    align-items: center;
+    background-color: #dae5ef;
+}
+
+footer img {
+    width: auto;
+    height: 5.5vh;
+    border-radius: 50%;
+    margin: 0 10px;
+
+}
+
+footer img:hover {
+    transform: scale(1.2);
+}
+
+footer p {
+    font-style: italic;
+    text-align: center;
+}
+
+
+footer a {
+    text-decoration: none;
+}
+
+
+
+
+/*SECCION - HOME*/
+
+.flash {
+    /*Es toda la seccion de la oferta*/
+    background-color: #ccedeb;
+    border-radius: 1rem;
+
+    margin: 1rem 1rem;
+
+}
+
+.oferta {
+    /*Son las 4 primeras ofertas que salen en HOME*/
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 1rem;
+    gap: 1rem;
+
+    justify-items: center;
+    align-items: center;
+
+}
+
+.ofertaFoto {
+    display: flex;
+    width: 100%;
+
+}
+
+
+.texto-flash {
+    /*Es el texto de abajo*/
+    text-align: center;
+    font-size: 1.3rem;
+    padding: .75rem;
+
+}
+
+.ofertaFoto:hover,
+.texto-flash:hover {
+    /*hace esa animacion que se hace as grande la foto nomas*/
+    transform: scale(1.2);
+}
+
+
+
+.carrouselNosotros {
+    /*SECTION*/
+    margin: 1rem 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    background-color: #7da8d1ad;
+    gap: 1rem;
+    border-radius: 1rem;
+
+    align-items: center;
+
+    height: 65vh;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.foto-carrousel {
+    border-radius: 1rem 0 0 1rem;
+    height: max-content;
+
+}
+
+.carousel-inner .carousel-item,
+.carousel-item img {
+    height: 100%;
+}
+
+.txt-carrousel {
+    font-size: 1.2rem;
+    font-family: Montserrat;
+
+    color: #141d25;
+
+    text-align: center;
+
+    margin-right: 1rem;
+    padding: 1rem;
+
+}
+
+
+/*SEGUNDA NAVEGACION - HOTELES TRABAJO*/
+
+.nav2 {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 95vw;
+
+    align-items: center;
+
+}
+
+.dropdown-nav2 {
+    border-radius: .50rem;
+    border: 1px solid #0d5494;
+
+
+}
+
+.dropdown-nav2 a {
+    color: #141d25;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.1rem;
+}
+
+.dropdown-nav2:hover {
+    background-color: #ccedeb9d;
+    color: #0d5494;
+
+}
+
+.continentes {
+    font-family: Montserrat;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.boton-dropdown {
+    border-radius: 1rem;
+}
+
+.boton-dropdown:hover {
+    background-color: #ccedeb;
+    border: 1px solid #3586cc;
+}
+
+/*PREGUNTAS FRECUENTES*/
+.preguntas-frecuentes {
+    margin: 1rem 1rem;
+
+    background-color: #f5f5f5;
+    border-radius: 1rem;
+}
+
+.pfq-body {
+    padding: .5rem;
+    text-align: center;
+    border-bottom: 1px solid #0d5494;
+}
+
+.pfq-body h3 {
+    text-decoration: underline 1px;
+}
+
+.pfq-preguntas {
+    padding: 1rem;
+}
+
+
+
+
+/*SECCION - SERVICIOS*/
+
+.servicios--tarjetas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    position: relative;
+    width: 33vw;
+    height: 43vh;
+    margin: 1rem;
+
+}
+
+.tarjeta .cuerpo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.tarjeta .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px rgb(14, 27, 99);
+}
+
+.tarjeta .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    color: #f5f5f5;
+    background-color: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.tarjeta .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #051a2bb7;
+    padding: 15px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: center;
+
+    box-shadow: 0 5px 10px rgb(14, 27, 99);
+}
+
+.tarjeta .back .link {
+    border-top: 1px solid white;
+    height: 50px;
+    line-height: 50px;
+}
+
+.tarjeta .back .link a {
+    color: white;
+    text-decoration: underline;
+
+}
+
+.tarjeta .back p {
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+.tarjeta:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.tarjeta:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.descripcion-servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 90vw;
+    margin: 1rem 1rem;
+
+    font-size: 1.2rem;
+    text-align: center;
+
+    padding: 1rem;
+}
+
+.servicios-boton:hover {
+    background-color: #a1c2c0;
+}
+
+
+
+
+/*SECCION - EXPERIENCIAS*/
+.testimonios-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+
+}
+
+.seccion-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+.testimonios {
+    background-color: #ccedeb;
+    width: 85vw;
+    height: auto;
+    border-radius: 15px;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgba(14, 27, 99, 0.274);
+}
+
+.input-opinion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    gap: .5rem;
+
+}
+
+#feedback,
+#preguntas {
+    width: 30;
+    height: 25vh;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+.texto-final-testimonios {
+    text-align: center;
+    margin: 1rem 1rem;
+    font-size: 1.1rem;
+}
+
+
+
+
+/*SECCION - RESERVA*/
+.reserva {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: column;
+    margin: 1rem 1rem;
+
+
+}
+
+.header-reserva p {
+    line-height: .75rem;
+    /*Reduce el espacio entre los parrafos ji*/
+}
+
+.primer-formulario {
+    background-color: #dff7f5;
+    padding: .75rem;
+
+}
+
+.formulario--reserva {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    justify-content: space-around;
+}
+
+.reserva select,
+input,
+label {
+    padding: 1px;
+    font-size: 1.1rem;
+}
+
+
+.datos-personales {
+    background-color: #c1e9e6;
+}
+
+.parrafo-reserva--seccion {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.404);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+}
+
+.datos-pago {
+    /*hace q datos personales y pago esten a la par*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.datos--items {
+    display: flex;
+
+
+
+    flex-direction: column;
+    margin: .5rem;
+}
+
+.terminos-condiciones {
+    margin: .5rem;
+}
+
+.datos--boton {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    flex-wrap: nowrap;
+}
+
+.pago {
+    background-color: #94c4c0;
+
+}
+
+.datos--boton .confirmacion:hover {
+    background-color: #3d54b9;
+    color: white;
+}
+
+
+
+
+/*SECCION - TRABAJO*/
+
+.seccion-trabajo {
+    display: grid;
+    justify-items: center;
+}
+
+.trabajo-cv {
+    min-height: 65vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.37), rgba(4, 9, 30, 0.37)), url(../imagenes/trabajaconnosotros.jpg);
+
+    background-position: center;
+    /*la img cubre el ancho*/
+    background-size: cover;
+    /*centra la img*/
+    position: relative;
+
+
+}
+
+.imagen-texto-trabajo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.txt-foto-principal {
+    color: whitesmoke;
+
+}
+
+.recomendaciones-beneficios {
+    display: flex;
+
+}
+
+.recomendaciones-trabajo {
+    background-color: rgb(228, 228, 228);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    width: 90%;
+
+}
+
+.ul-con-raya {
+    list-style-type: none;
+    /*Saca punto feo*/
+}
+
+.ul-con-raya li::before {
+    content: "- ";
+    /*Pone guion en vez del punto feo*/
+
+}
+
+
+
+.formulario-trabajo {
+    background-color: #ccedeb;
+    border-radius: 1rem;
+    margin: 1rem 1rem;
+    
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: .5rem;
+}
+
+.subir-cv{
+    width: 100%;
+}
+.subir-cv--item select,
+input,
+label {
+    padding: 1px;
+    font-size: 1.1rem;
+    margin: .5rem;
+}
+
+.curriculum-file {
+    background-color: #8fc1fa;
+    margin: 0;
+    width: 50%;
+
+}
+
+.subir-cv--boton {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+
+}
+
+.cv {
+    padding-top: 1rem;
+    
+}
+
+.preguntas-dudas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1rem;
+}
+
+.preguntas-boton {
+    width: 30%;
+    align-self: center;
+}
+
+@media (max-width:425px) {
+    header {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    /*FLASH*/
+    .oferta {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .texto-flash {
+        font-size: 1rem;
+    }
+
+    /*CARROUSEL*/
+    .carrouselNosotros {
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+    }
+
+    /*SEGUNDA NAVEGACION - HOTELES TRABAJO*/
+    .nav2 {
+        width: 100vw;
+    }
+
+
+    /*Servicios*/
+    .tarjeta {
+        position: relative;
+        width: 90vw;
+        height: 45vh;
+        margin: 1rem;
+    }
+
+    .tarjeta .back p {
+        padding: 0;
+    }
+
+
+    /*RESERVA*/
+    .reserva {
+        align-items: center;
+    }
+
+    .formulario--reserva {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .datos-pago {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .header-reserva p {
+        line-height: 1rem;
+    }
+
+    /*TRABAJO*/
+    .recomendaciones-beneficios {
+        flex-wrap: wrap;
+    }
+    
+    .curriculum-file, .preguntas-boton{
+        width: 80%;
+    }
+    
+}
