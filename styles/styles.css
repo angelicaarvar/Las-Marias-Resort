@@ -457,13 +457,18 @@ footer a {
 
 
 /*SECCION - EXPERIENCIAS*/
+
 .testimonios-tarjetas {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 1rem 1rem;
 
 }
-
+.testimonios--h2{
+    display: flex;
+    
+}
 .seccion-tarjetas {
     display: flex;
     flex-wrap: wrap;
@@ -510,7 +515,9 @@ footer a {
     font-size: 1.1rem;
 }
 
-
+.boton-testimonios:hover{
+    background-color: #a1c2c0;
+}
 
 
 /*SECCION - RESERVA*/
@@ -524,9 +531,11 @@ footer a {
 
 }
 
-.header-reserva p {
+.header-reserva  {
+    text-align: center;
     line-height: .75rem;
     /*Reduce el espacio entre los parrafos ji*/
+
 }
 
 .primer-formulario {
@@ -607,7 +616,7 @@ label {
 /*SECCION - TRABAJO*/
 
 .main-trabajo {
-    width: 100vw;
+    width: 98.9vw;
 }
 
 .seccion-trabajo {
