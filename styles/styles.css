@@ -56,13 +56,7 @@ a {
     ;
 }
 
-/* main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
 
-} */
 
 /*SECCION HEADER*/
 header {
@@ -129,6 +123,11 @@ header {
     width: 100%;
 }
 
+main {
+    width: 92vw;
+    margin: 0 auto;
+}
+
 
 
 
@@ -169,6 +168,18 @@ footer a {
 
 
 /*SECCION - HOME*/
+/*
+.index-home {
+     width: 92vw;
+    margin: 0 auto;
+    
+     display: flex;
+    flex-direction: column;
+
+
+    align-items: center;
+    flex-wrap: wrap; 
+}*/
 
 .flash {
     /*Es toda la seccion de la oferta*/
@@ -595,6 +606,10 @@ label {
 
 /*SECCION - TRABAJO*/
 
+.main-trabajo {
+    width: 100vw;
+}
+
 .seccion-trabajo {
     display: grid;
     justify-items: center;
@@ -663,7 +678,7 @@ label {
     background-color: #ccedeb;
     border-radius: 1rem;
     margin: 1rem 1rem;
-    
+
 
     display: flex;
     flex-wrap: wrap;
@@ -672,9 +687,10 @@ label {
     padding: .5rem;
 }
 
-.subir-cv{
+.subir-cv {
     width: 100%;
 }
+
 .subir-cv--item select,
 input,
 label {
@@ -699,7 +715,7 @@ label {
 
 .cv {
     padding-top: 1rem;
-    
+
 }
 
 .preguntas-dudas {
@@ -782,9 +798,10 @@ label {
     .recomendaciones-beneficios {
         flex-wrap: wrap;
     }
-    
-    .curriculum-file, .preguntas-boton{
+
+    .curriculum-file,
+    .preguntas-boton {
         width: 80%;
     }
-    
+
 }
