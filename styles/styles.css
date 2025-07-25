@@ -457,86 +457,6 @@ footer a {
 
 /*SECCION - EXPERIENCIAS*/
 
-@media (max-width:425px) {
-    header {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    h1 {
-        display: none;
-    }
-
-    /*FLASH*/
-    .oferta {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .texto-flash {
-        font-size: 1rem;
-    }
-
-    /*CARROUSEL*/
-    .carrouselNosotros {
-        grid-template-columns: repeat(1, 1fr);
-        height: auto;
-    }
-
-    /*SEGUNDA NAVEGACION - HOTELES TRABAJO*/
-    .nav2 {
-        width: 90%;
-    }
-
-
-    /*Servicios*/
-    .tarjeta {
-        position: relative;
-        width: 90vw;
-        height: 45vh;
-        margin: 1rem;
-    }
-
-    .tarjeta .back p {
-        padding: 0;
-    }
-
-    /*Experiencia*/
-    .testimonios-tarjetas h2{
-        text-align: center;
-    }
-
-
-    /*RESERVA*/
-    .reserva {
-        align-items: center;
-    }
-
-    .formulario--reserva {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .datos-pago {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-
-    .header-reserva p {
-        line-height: 1rem;
-    }
-
-    /*TRABAJO*/
-    .recomendaciones-beneficios {
-        flex-wrap: wrap;
-    }
-
-    .curriculum-file,
-    .preguntas-boton {
-        width: 80%;
-    }
-
-}
-
 .testimonios-tarjetas {
     display: flex;
     flex-wrap: wrap;
@@ -816,5 +736,81 @@ label {
 .preguntas-boton {
     width: 30%;
     align-self: center;
+}
+
+
+@media (max-width:425px) {
+    header {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    /*FLASH*/
+    .oferta {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .texto-flash {
+        font-size: 1rem;
+    }
+
+    /*CARROUSEL*/
+    .carrouselNosotros {
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+    }
+
+    /*SEGUNDA NAVEGACION - HOTELES TRABAJO*/
+    .nav2 {
+        width: 90%;
+    }
+
+
+    /*Servicios*/
+    .tarjeta {
+        position: relative;
+        width: 90vw;
+        height: 45vh;
+        margin: 1rem;
+    }
+
+    .tarjeta .back p {
+        padding: 0;
+    }
+
+
+    /*RESERVA*/
+    .reserva {
+        align-items: center;
+    }
+
+    .formulario--reserva {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .datos-pago {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .header-reserva p {
+        line-height: 1rem;
+    }
+
+    /*TRABAJO*/
+    .recomendaciones-beneficios {
+        flex-wrap: wrap;
+    }
+
+    .curriculum-file,
+    .preguntas-boton {
+        width: 80%;
+    }
+
 }
 
