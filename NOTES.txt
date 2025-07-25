@@ -5,7 +5,7 @@ DONE:
 INDEX ---- LISTO
 (1) 
 -Seccion flash 
--Seccion Carrousel --> Preguntar porque en mobile funciona bien, en laptop tmb pero en tablet rompe
+-Seccion Carrousel 
 - Nav2
 -Preg Frec
 -responsive
