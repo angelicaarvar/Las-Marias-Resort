@@ -522,27 +522,34 @@ footer a {
 
 
 /*SECCION - RESERVA*/
+.main-reserva{
+    display: flex;
+    width: 96vw;
+    
+    justify-content: center;
+}
 
 .reserva {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     flex-direction: column;
-    margin: 1rem 1rem;
 
-
+    width: auto;
 }
 
 .header-reserva {
     text-align: center;
     line-height: .75rem;
     /*Reduce el espacio entre los parrafos ji*/
+    margin-top: .75rem;
 
 }
 
 .primer-formulario {
     background-color: #dff7f5;
     padding: .75rem;
+
 
 }
 
@@ -570,6 +577,7 @@ label {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.404);
     border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+    padding: .5rem;
 }
 
 .datos-pago {
@@ -805,9 +813,6 @@ label {
         grid-template-rows: repeat(2, 1fr);
     }
 
-    .header-reserva{
-        margin-top: .5rem;
-    }
 
     /*TRABAJO*/
     .recomendaciones-beneficios {
