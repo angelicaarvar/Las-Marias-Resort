@@ -1,0 +1,189 @@
+@use "variables" as v;
+
+/*MAIN*/
+
+/*FLASH - ofertas*/
+main {
+    .flash {
+        background-color: v.$colorSecundario;
+        border-radius: 1rem;
+        margin: v.$margin;
+
+        .oferta {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 1rem;
+            gap: 1rem;
+
+            justify-items: center;
+            align-items: center;
+
+            a {
+                .oferta-foto {
+                    display: flex;
+                    width: 100%;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+
+            }
+
+        }
+
+        .texto-flash {
+            text-align: center;
+            font-size: 1.3rem;
+            padding: .75rem;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+
+    // carrouselNosotros
+    .carrouselNosotros {
+        margin: v.$margin;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #7da8d1ad;
+        gap: 1rem;
+        border-radius: 1rem;
+
+        align-items: center;
+
+        height: 65vh;
+        position: relative;
+        overflow: hidden;
+
+        .carousel {
+            .photo-carousel {
+                img {
+                    .foto--carrousel {
+                        border-radius: 1rem 0 0 1rem;
+                        height: max-content;
+                    }
+                }
+            }
+
+            .carousel-inner,
+            .carousel-item,
+            .carousel-item img {
+                height: 100%;
+            }
+        }
+
+        .texto-c {
+            .txt-carrousel {
+                font-size: 1.2rem;
+                font-family: v.$fuenteTextos;
+
+                color: v.$colorTerciario;
+
+                text-align: center;
+
+                margin-right: 1rem;
+                padding: 1rem;
+            }
+        }
+    }
+
+    //hoteles-trabajo
+
+    .hoteles-trabajo {
+        .nav2 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 90vw;
+            align-items: center;
+
+            .dropdown-nav2 {
+                border-radius: .50rem;
+                border: 1px solid v.$colorHome;
+
+                &:hover {
+                    background-color: #ccedeb9d;
+                }
+
+                a {
+                    color: v.$colorTerciario;
+                    text-align: center;
+                    font-family: v.$fuenteTextos;
+                    font-size: 1.1rem;
+                }
+
+                .dropdown-menu {
+                    li {
+                        .continentes {
+                            font-family: v.$fuenteTextos;
+                            text-align: center;
+                            text-decoration: underline;
+                        }
+
+
+
+                        .boton-dropdown {
+                            border-radius: 1rem;
+
+                            &:hover {
+                                background-color: v.$colorSecundario;
+                                border: 1px solid #3586cc;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    //preguntas-frecuentes
+
+    .preguntas-frecuentes {
+        margin: v.$margin;
+        background-color: #f5f5f5;
+        border-radius: 1rem;
+
+        .pfq-body {
+            padding: .5rem;
+            text-align: center;
+            border-bottom: 1px solid v.$colorHome;
+
+            h3 {
+                text-decoration: underline 1px;
+                font-family: v.$fuenteTitulos;
+            }
+        }
+
+        .pfq-preguntas {
+            padding: 1rem;
+        }
+    }
+
+    @include v.mobile {
+        .flash {
+            .oferta {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .carrouselNosotros{
+            grid-template-columns: repeat(1, 1fr);
+            height: auto;
+        }
+
+        .hoteles-trabajo{
+            display: flex;
+            justify-content: space-around;
+            .nav2{
+                width: 90%;
+            }
+        }
+    }
+
+}

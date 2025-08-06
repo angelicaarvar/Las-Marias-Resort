@@ -1,0 +1,81 @@
+@use "variables" as v;
+
+header {
+    background-color: v.$fondoHeaderFooter;
+    align-items: center;
+    @extend %f-row;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    justify-content: space-between; /*Logo a la derecha, nav a la izquierda*/
+    
+    .elementos-header {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100vw;
+        justify-content: space-between;
+
+        .logo-titulo {
+            display: flex;
+            align-items: center;
+
+            a {
+                .logo-hotel {
+                    width: 4rem;
+                    height: auto;
+                    margin: 0 1rem;
+                }
+            }
+
+            h1 {
+                    margin-bottom: 0;
+                    color: v.$colorHome;
+                    font-family: v.$fuenteTitulos;
+            }
+
+        }
+
+        .menu {
+            width: 100%;
+
+            .container-fluid {
+                flex-direction: row-reverse;
+                display: flex;
+                justify-content: space-between;
+                // margin-right: .5rem;
+
+            }
+
+            .navegacion-principal {
+                    display: flex;
+                    width: 100%;
+                    justify-content: end;
+                    gap: 1rem;
+                    list-style: none;
+                    padding: 0;
+                    margin: v.$margin;
+
+                    a {
+                        text-decoration: none;
+                        color: v.$colorHome;
+                        font-family: v.$fuenteTextos;
+                    }
+
+            }
+        }
+
+    }
+    @include v.mobile{
+        height: auto;
+        flex-direction: column;
+        gap: 0;
+        h1{
+            display: none;
+        }
+
+        .menu{
+                flex-direction: row-reverse;
+        }
+    }
+}
+

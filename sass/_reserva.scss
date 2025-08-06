@@ -1,0 +1,111 @@
+@use "variables" as v;
+
+.main-reserva {
+    display: flex;
+    width: 96vw;
+    justify-content: center;
+
+    .reserva {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 1rem;
+        width: auto;
+
+        .header-reserva {
+            text-align: center;
+            font-family: v.$fuenteTitulos;
+            color: v.$colorTerciario;
+            line-height: .75rem;
+            margin-top: .75rem;
+        }
+
+        .primer-formulario {
+            background-color: #dff7f5;
+            padding: .75rem;
+
+            .formulario--reserva {
+                @extend %f-row;
+                justify-content: space-around;
+                gap: 1rem;
+            }
+        }
+
+        select,
+        input,
+        label {
+            padding: 1px;
+            font-size: 1.1rem;
+        }
+
+        .datos-pago {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            .reserva--datos {
+                
+                .parrafo-reserva--seccion {
+                    font-size: 1.2rem;
+                    color: rgba(0, 0, 0, 0.404);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.144);
+                    padding: .5rem;
+                }
+
+                .datos--items {
+                    display: flex;
+                    flex-direction: column;
+                    margin: .5rem;
+                }
+
+                .terminos-condiciones {
+                    margin: .5rem;
+                }
+
+            }
+
+            .datos-personales {
+                background-color: #c1e9e6;
+            }
+
+            .pago {
+                background-color: #94c4c0;
+
+            }
+
+            .datos--boton {
+                display: flex;
+                justify-content: center;
+                margin: 1rem;
+                flex-wrap: nowrap;
+
+                .confirmacion {
+                    &:hover {
+                        background-color: #3d54b9;
+                        color: rgb(255, 255, 255);
+                    }
+                }
+
+            }
+        }
+    }
+
+    @include v.mobile{
+        .reserva{
+            margin: v.$margin;
+            flex-direction: row;
+            align-items: center;
+
+            .formulario--reserva{
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .datos-pago{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+            }
+        }
+    }
+}

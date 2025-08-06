@@ -2,45 +2,48 @@ DONE:
 -header Y responsive (1)
 -footer (2)
 
-INDEX ---- LISTO
-(1) 
--Seccion flash 
--Seccion Carrousel 
-- Nav2
--Preg Frec
--responsive
+SASS = **
+
+
+INDEX ---- LISTO **
+(1) ** responsive
+(2) ** responsive
+-Seccion flash ** responsive
+-Seccion Carrousel ** responsive
+- Nav2 ** responsive
+-Preg Frec ** responsive
 
 
 SERVICIOS -- LISTO
-(1) 
--TArjetas
+(1) ** responsive
+-TArjetas --REVISAR PORQUQE APARECE ADELANTE PERO NO ATRAS XD
 -Parte de Atras
--Responsive
-(2)
+(2) ** responsive
 
-EXPERIENCIAS -- LISTO
-(1)
--h2
--testimonios
--parte de abajo con botones
--todo responsive
-(2)
+EXPERIENCIAS -- LISTO **
+(1) **
+-h2 **
+-testimonios **
+-parte de abajo con botones **
+-todo responsive **
+(2) **
 
 RESERVA --LISTO
-(1)
-- header
-- 1er formulario
-- grilla de Datos y Pago
--responsive
+(1) (2) ** 
+- 1er formulario **
+- grilla de Datos y Pago **
+-responsive **
 
 
-TRABAJO -- LISTO
-(1)
--BACKG imagenes
--recomendaciones y beneficios
-- formulario
--preguntas
--NO es responsive
+TRABAJO -- LISTO **
+(1) **
+-BACKG imagenes **
+-recomendaciones y beneficios **
+- formulario **
+-preguntas AGREGAR EXTEND **
+- responsive **
+
+
 
 
 

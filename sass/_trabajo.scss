@@ -1,0 +1,128 @@
+@use "variables" as v;
+
+.main-trabajo {
+    width: 98.9vw;
+
+    .seccion-trabajo {
+        display: grid;
+        justify-items: center;
+
+        .trabajo-cv {
+            min-height: 65vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.37), rgba(4, 9, 30, 0.37)), url(../imagenes/trabajaconnosotros.jpg);
+            background-position: center;
+            /*la img cubre el ancho*/
+            background-size: cover;
+            /*centra la img*/
+            position: relative;
+
+            .imagen-texto-trabajo {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                font-family: v.$fuenteTitulos;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .txt-foto-principal {
+                    color: v.$colorSecundario;
+                }
+
+            }
+        }
+
+        .recomendaciones-beneficios {
+            display: flex;
+
+            .recomendaciones-trabajo {
+                background-color: rgb(228, 228, 228);
+                margin: v.$margin;
+                padding: 1rem;
+                border-radius: 1rem;
+                font-size: 1.2rem;
+                width: 90%;
+
+                .ul-con-raya {
+                    list-style-type: none;
+                    /*Saca punto feo*/
+
+                    li {
+                        &::before {
+                            content: "- ";
+                            /*Pone guion en vez del punto feo*/
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .formulario-trabajo {
+            @extend %f-column;
+            background-color: v.$colorSecundario;
+            border-radius: 1rem;
+            margin: v.$margin;
+            padding: .5rem;
+
+            .subir-cv {
+                width: 100%;
+
+                .subir-cv--item select,
+                input,
+                label {
+                    padding: 1px;
+                    font-size: 1.1rem;
+                    margin: .5rem;
+                }
+
+                .curriculum-file {
+                    background-color: #8fc1fa;
+                    margin: 0;
+                    width: 50%;
+                    padding: .5rem;
+                }
+
+                .cv {
+                    padding-top: 1rem;
+                }
+            }
+
+            .subir-cv--boton {
+                display: flex;
+                justify-content: center;
+                padding-top: 1rem;
+            }
+        }
+
+        .preguntas-dudas {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+
+            .txt-area-trabajo {
+                @extend %input-texto;
+            }
+
+            .preguntas-boton {
+                width: 30%;
+                align-self: center;
+            }
+        }
+    }
+
+    @include v.mobile {
+        .recomendaciones-beneficios {
+            flex-wrap: wrap;
+        }
+
+        .curriculum-file,
+        .preguntas-boton {
+            width: 80%;
+        }
+    }
+}

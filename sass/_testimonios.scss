@@ -1,0 +1,60 @@
+@use "variables" as v;
+
+main {
+    .testimonios-tarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: v.$margin;
+
+        .txt-testimonio {
+            text-align: center;
+            font-family: v.$fuenteTitulos;
+            color: v.$colorTerciario;
+        }
+
+        .seccion-tarjetas {
+            @extend %f-row;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: .5rem;
+
+            .testimonios {
+                background-color: v.$colorSecundario;
+                width: 85vw;
+                height: auto;
+                border-radius: .5rem;
+                text-align: center;
+                padding: 1rem;
+                box-shadow: 0 5px 10px rgba(14, 27, 99, 0.274);
+            }
+        }
+    }
+
+    .texto-final-testimonios {
+        text-align: center;
+        margin: v.$margin;
+        font-size: 1.1rem;
+
+        .boton-testimonios {
+            &:hover {
+                background: #a1c2c0;
+            }
+        }
+
+        .input-opinion {
+            @extend %f-column;
+            margin: 1rem;
+            gap: .5rem;
+
+            .txt-area-testimonio {
+                @extend %input-texto;
+            }
+
+        }
+    }
+
+    @include v.mobile{
+        
+    }
+}
