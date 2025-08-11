@@ -41,7 +41,7 @@ button {
   align-items: center;
 }
 
-.main-trabajo .seccion-trabajo .formulario-trabajo, main .texto-final-testimonios .input-opinion, .servicios--tarjetas .descripcion-servicios p, .servicios--tarjetas .tarjeta .back, footer {
+.main-trabajo .seccion-trabajo .formulario-trabajo, main .texto-final-testimonios .input-opinion, .servicios--tarjetas .tarjeta .cuerpo.back, .descripcion-servicios p, footer {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
@@ -149,33 +149,42 @@ footer p {
 .servicios--tarjetas {
   justify-content: center;
   min-height: 100vh;
+  flex-wrap: wrap;
 }
 .servicios--tarjetas .tarjeta {
   position: relative;
   width: 33vw;
   height: 43vh;
   margin: 1rem;
+  perspective: 600px;
+  /*perspectiva en el contenedor*/
+  transform-style: preserve-3d;
+  /*Giro de las tarjetas*/
 }
 .servicios--tarjetas .tarjeta .cuerpo {
   position: absolute;
+  top: 0;
+  /*solapa*/
+  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 1rem;
   overflow: hidden;
   transition: 0.5s;
 }
-.servicios--tarjetas .tarjeta .front {
-  transform: perspective(600px) rotateY(0deg);
+.servicios--tarjetas .tarjeta .cuerpo.front {
+  transform: rotateY(0deg);
   box-shadow: 0 5px 10px rgb(14, 27, 99);
 }
-.servicios--tarjetas .tarjeta .front img {
+.servicios--tarjetas .tarjeta .cuerpo.front img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.servicios--tarjetas .tarjeta .front h3 {
+.servicios--tarjetas .tarjeta .cuerpo.front h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   position: absolute;
   bottom: 0;
@@ -186,15 +195,42 @@ footer p {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
-.servicios--tarjetas .tarjeta .front:hover {
-  transform: perspective(600px) rotateY(180deg);
+.servicios--tarjetas .tarjeta .cuerpo.back {
+  transform: rotateY(180deg);
+  background: #141d25;
+  padding: 15px;
+  color: white;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px rgb(14, 27, 99);
 }
-.servicios--tarjetas .descripcion-servicios {
+.servicios--tarjetas .tarjeta .cuerpo.back .link {
+  border-top: 1px solid rgb(255, 255, 255);
+  height: 50px;
+  line-height: 50px;
+}
+.servicios--tarjetas .tarjeta .cuerpo.back .link a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+.servicios--tarjetas .tarjeta .cuerpo.back p {
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  padding: 1rem;
+}
+.servicios--tarjetas .tarjeta:hover .cuerpo.front {
+  transform: rotateY(180deg);
+}
+.servicios--tarjetas .tarjeta:hover .cuerpo.back {
+  transform: rotateY(0deg);
+}
+
+.descripcion-servicios {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
-.servicios--tarjetas .descripcion-servicios p {
+.descripcion-servicios p {
   justify-content: center;
   width: 90vw;
   margin: 1rem 1rem;
@@ -202,37 +238,12 @@ footer p {
   text-align: center;
   padding: 1rem;
 }
-.servicios--tarjetas .descripcion-servicios .servicios-boton {
+.descripcion-servicios .servicios-boton {
   align-self: center;
 }
-.servicios--tarjetas .descripcion-servicios .servicios-boton:hover {
+.descripcion-servicios .servicios-boton:hover {
   background-color: #ccedeb;
 }
-.servicios--tarjetas .tarjeta .back {
-  transform: perspective(600px) rotateY(180deg);
-  background: rgba(5, 26, 43, 0.7176470588);
-  padding: 15px;
-  color: white;
-  justify-content: space-between;
-  box-shadow: 0 5px 10px rgb(14, 27, 99);
-}
-.servicios--tarjetas .tarjeta .back .link {
-  border-top: 1px solid white;
-  height: 50px;
-  line-height: 50px;
-}
-.servicios--tarjetas .tarjeta .back .link a {
-  color: white;
-  text-decoration: underline;
-}
-.servicios--tarjetas .tarjeta .back p {
-  letter-spacing: 1px;
-  padding: 1rem;
-}
-.servicios--tarjetas .tarjeta .back:hover {
-  transform: perspective(600px) rotateY(360deg);
-}
-
 main .testimonios-tarjetas {
   display: flex;
   flex-wrap: wrap;

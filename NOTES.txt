@@ -8,7 +8,7 @@ SASS = **
 INDEX ---- LISTO **
 (1) ** responsive
 (2) ** responsive
--Seccion flash ** responsive
+-Seccion flash -- ROmpe, el resto TODO COMPLETO bien
 -Seccion Carrousel ** responsive
 - Nav2 ** responsive
 -Preg Frec ** responsive
@@ -42,8 +42,3 @@ TRABAJO -- LISTO **
 - formulario **
 -preguntas AGREGAR EXTEND **
 - responsive **
-
-
-
-
-
