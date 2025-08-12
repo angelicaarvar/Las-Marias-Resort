@@ -22,10 +22,8 @@ main {
                 .oferta-foto {
                     display: flex;
                     width: 100%;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
+                    @extend %expandir;
+                    border-radius: .2rem;
                 }
 
             }
@@ -36,10 +34,6 @@ main {
             text-align: center;
             font-size: 1.3rem;
             padding: .75rem;
-
-            &:hover {
-                transform: scale(1.2);
-            }
         }
     }
 

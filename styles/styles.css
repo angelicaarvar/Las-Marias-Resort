@@ -22,10 +22,10 @@ button {
   text-decoration: none;
 }
 
-main .texto-final-testimonios .boton-testimonios, footer a img, header .elementos-header .logo-titulo a .logo-hotel, header .elementos-header .menu .navegacion-principal a, .button { /*Animacion que agranda elementos*/
+main .flash .oferta a .oferta-foto, main .texto-final-testimonios .boton-testimonios, footer a img, header .elementos-header .logo-titulo a .logo-hotel, header .elementos-header .menu .navegacion-principal a, .button { /*Animacion que agranda elementos*/
   transition: transform 0.3s ease;
 }
-main .texto-final-testimonios .boton-testimonios:hover, footer a img:hover, header .elementos-header .logo-titulo a .logo-hotel:hover, header .elementos-header .menu .navegacion-principal a:hover, .button:hover {
+main .flash .oferta a .oferta-foto:hover, main .texto-final-testimonios .boton-testimonios:hover, footer a img:hover, header .elementos-header .logo-titulo a .logo-hotel:hover, header .elementos-header .menu .navegacion-principal a:hover, .button:hover {
   transform: scale(1.13);
 }
 
@@ -507,17 +507,12 @@ main .flash .oferta {
 main .flash .oferta a .oferta-foto {
   display: flex;
   width: 100%;
-}
-main .flash .oferta a .oferta-foto:hover {
-  transform: scale(1.2);
+  border-radius: 0.2rem;
 }
 main .flash .texto-flash {
   text-align: center;
   font-size: 1.3rem;
   padding: 0.75rem;
-}
-main .flash .texto-flash:hover {
-  transform: scale(1.2);
 }
 main .carrouselNosotros {
   margin: 1rem 1rem;
