@@ -22,6 +22,13 @@ button {
   text-decoration: none;
 }
 
+main .texto-final-testimonios .boton-testimonios, footer a img, header .elementos-header .logo-titulo a .logo-hotel, header .elementos-header .menu .navegacion-principal a, .button { /*Animacion que agranda elementos*/
+  transition: transform 0.3s ease;
+}
+main .texto-final-testimonios .boton-testimonios:hover, footer a img:hover, header .elementos-header .logo-titulo a .logo-hotel:hover, header .elementos-header .menu .navegacion-principal a:hover, .button:hover {
+  transform: scale(1.13);
+}
+
 .button {
   background-color: rgb(244, 245, 247);
   border: 1px solid #141d25;
@@ -65,7 +72,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  justify-content: space-between; /*Logo a la derecha, nav a la izquierda*/
+  justify-content: space-between;
+  /*Logo a la derecha, nav a la izquierda*/
 }
 header .elementos-header {
   display: grid;
@@ -137,9 +145,6 @@ footer a img {
   height: auto;
   border-radius: 50%;
   margin: 0 10px;
-}
-footer a img:hover {
-  transform: scale(1.2);
 }
 footer p {
   font-style: italic;

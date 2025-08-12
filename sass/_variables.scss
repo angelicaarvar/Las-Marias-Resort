@@ -34,6 +34,14 @@ button {
     text-decoration: none;
 }
 
+%expandir{ /*Animacion que agranda elementos*/
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.13);
+    }
+}
+
+
 .button {
     background-color: rgb(244, 245, 247);
     border: 1px solid #141d25;
@@ -41,8 +49,9 @@ button {
     border-radius: 10px;
     padding: .5rem;
     text-align: center;
+    @extend %expandir;
 
-    a{
+    a {
         color: #000000;
     }
 }
@@ -67,7 +76,7 @@ button {
     align-items: center;
 }
 
-%input-texto{
+%input-texto {
     width: 30;
     height: 25vh;
     padding: 12px 20px;

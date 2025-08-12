@@ -15,10 +15,7 @@ footer {
             height: auto;
             border-radius: 50%;
             margin: 0 10px;
-
-            &:hover {
-                transform: scale(1.2);
-            }
+            @extend %expandir;
         }
     }
     p{

@@ -7,8 +7,9 @@ header {
     position: sticky;
     top: 0;
     z-index: 2;
-    justify-content: space-between; /*Logo a la derecha, nav a la izquierda*/
-    
+    justify-content: space-between;
+    /*Logo a la derecha, nav a la izquierda*/
+
     .elementos-header {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -24,13 +25,14 @@ header {
                     width: 4rem;
                     height: auto;
                     margin: 0 1rem;
+                    @extend %expandir;
                 }
             }
 
             h1 {
-                    margin-bottom: 0;
-                    color: v.$colorHome;
-                    font-family: v.$fuenteTitulos;
+                margin-bottom: 0;
+                color: v.$colorHome;
+                font-family: v.$fuenteTitulos;
             }
 
         }
@@ -47,35 +49,38 @@ header {
             }
 
             .navegacion-principal {
-                    display: flex;
-                    width: 100%;
-                    justify-content: end;
-                    gap: 1rem;
-                    list-style: none;
-                    padding: 0;
-                    margin: v.$margin;
+                display: flex;
+                width: 100%;
+                justify-content: end;
+                gap: 1rem;
+                list-style: none;
+                padding: 0;
+                margin: v.$margin;
 
-                    a {
-                        text-decoration: none;
-                        color: v.$colorHome;
-                        font-family: v.$fuenteTextos;
-                    }
+
+                a {
+                    text-decoration: none;
+                    color: v.$colorHome;
+                    font-family: v.$fuenteTextos;
+                    @extend %expandir;  
+                }
 
             }
         }
 
     }
-    @include v.mobile{
+
+    @include v.mobile {
         height: auto;
         flex-direction: column;
         gap: 0;
-        h1{
+
+        h1 {
             display: none;
         }
 
-        .menu{
-                flex-direction: row-reverse;
+        .menu {
+            flex-direction: row-reverse;
         }
     }
 }
-

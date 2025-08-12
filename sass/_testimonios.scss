@@ -37,6 +37,7 @@ main {
         font-size: 1.1rem;
 
         .boton-testimonios {
+            @extend %expandir;
             &:hover {
                 background: #a1c2c0;
             }
@@ -52,9 +53,5 @@ main {
             }
 
         }
-    }
-
-    @include v.mobile{
-        
     }
 }
