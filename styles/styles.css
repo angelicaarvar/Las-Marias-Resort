@@ -399,7 +399,7 @@ main .texto-final-testimonios .input-opinion {
 .main-trabajo .seccion-trabajo .trabajo-cv {
   min-height: 65vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4, 9, 30, 0.37), rgba(4, 9, 30, 0.37)), url(../imagenes/trabajaconnosotros.jpg);
+  background-image: linear-gradient(rgba(4, 9, 30, 0.37), rgba(4, 9, 30, 0.37)), url(../imagenes/trabajaconnosotros.webp);
   background-position: center;
   /*la img cubre el ancho*/
   background-size: cover;
