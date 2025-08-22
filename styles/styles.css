@@ -48,7 +48,7 @@ main .flash .oferta a .oferta-foto:hover, main .texto-final-testimonios .boton-t
   align-items: center;
 }
 
-.main-trabajo .seccion-trabajo .formulario-trabajo, main .texto-final-testimonios .input-opinion, .servicios--tarjetas, .servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back, .descripcion-servicios p, footer {
+.main-trabajo .seccion-trabajo .formulario-trabajo, main .texto-final-testimonios .input-opinion, .servicios--tarjetas, .servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back, .servicios--tarjetas .descripcion-servicios p, footer {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
@@ -154,7 +154,6 @@ footer p {
 .servicios--tarjetas {
   justify-content: center;
   min-height: 100vh;
-  flex-wrap: wrap;
 }
 .servicios--tarjetas .titulo-servicio {
   display: flex;
@@ -240,41 +239,46 @@ footer p {
   transform: rotateY(0deg);
 }
 @media (max-width: 430px) {
-  .servicios--tarjetas .servicios--tarjetas {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  .servicios--tarjetas .tarjeta {
-    position: relative;
-    width: 85vw;
-    height: 55vh;
-    margin: 1rem;
+  .servicios--tarjetas .contenedor-tarjetas {
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 85vw;
   }
-  .servicios--tarjetas .tarjeta .cuerpo.back .link {
+  .servicios--tarjetas .contenedor-tarjetas .tarjeta {
+    position: relative;
+    width: 100%;
+    height: 55vh;
+    margin: 0.5rem auto 1rem;
+  }
+  .servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back .link {
     display: none;
   }
 }
-
-.descripcion-servicios {
+.servicios--tarjetas .descripcion-servicios {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
-.descripcion-servicios p {
+.servicios--tarjetas .descripcion-servicios p {
   justify-content: center;
   width: 90vw;
   margin: 1rem 1rem;
   font-size: 1.2rem;
   text-align: center;
-  padding: 1rem;
+  padding: 0 0.5rem 0 0.5rem;
 }
-.descripcion-servicios .servicios-boton {
+.servicios--tarjetas .descripcion-servicios .servicios-boton {
   align-self: center;
 }
-.descripcion-servicios .servicios-boton:hover {
+.servicios--tarjetas .descripcion-servicios .servicios-boton:hover {
   background-color: #ccedeb;
+}
+@media (max-width: 430px) {
+  .servicios--tarjetas {
+    align-content: center;
+  }
 }
 
 main .testimonios-tarjetas {

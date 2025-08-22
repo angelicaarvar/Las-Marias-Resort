@@ -1,27 +1,9 @@
 @use "variables" as v;
 
-
-
-// .titulo-servicios {
-//     display: flex;
-//     justify-content: center;
-//     margin-top: .5rem;
-//     text-decoration: underline 1px;
-//     font-size: 1.8rem;
-
-//     text-align: center;
-//     font-family: v.$fuenteTitulos;
-//     color: v.$colorTerciario;
-// }
-
-
-
-
 .servicios--tarjetas {
     @extend %f-column;
     justify-content: center;
     min-height: 100vh;
-    flex-wrap: wrap;
 
 
     .titulo-servicio {
@@ -35,8 +17,8 @@
     .contenedor-tarjetas {
         @extend %f-row;
         justify-content: center;
-        .tarjeta {
 
+        .tarjeta {
             position: relative;
             width: 33vw;
             height: 43vh;
@@ -122,62 +104,93 @@
                     transform: rotateY(0deg);
                 }
             }
+
+        }
+
+
+        @include v.mobile {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+
+            width: 85vw;
+
+            .tarjeta {
+                position: relative;
+                width: 100%;
+                
+                height: 55vh;
+                margin: .5rem auto 1rem;
+
+
+                .cuerpo.back {
+                    .link {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .descripcion-servicios {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+
+        p {
+            @extend %f-column;
+            justify-content: center;
+            width: 90vw;
+            margin: v.$margin;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 0 .5rem 0 .5rem;
+        }
+
+        .servicios-boton {
+            align-self: center;
+
+
+            &:hover {
+                background-color: v.$colorSecundario;
+            }
         }
     }
 
     @include v.mobile {
-
-        .servicios--tarjetas {
-            display: grid;
-            grid-template-columns: 1fr;
-            justify-items: center;
-
-
-        }
-
-        .tarjeta {
-            position: relative;
-            width: 85vw;
-            height: 55vh;
-            margin: 1rem;
-            flex-direction: column;
-
-            .cuerpo.back {
-
-                .link {
-                    display: none;
-                }
-            }
-        }
-
-
-
-
-
+        align-content: center;
     }
 }
 
-.descripcion-servicios {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+// @include v.mobile {
 
-    p {
-        @extend %f-column;
-        justify-content: center;
-        width: 90vw;
-        margin: v.$margin;
-        font-size: 1.2rem;
-        text-align: center;
-        padding: 1rem;
-    }
+//         .contenedor-tarjetas {
+//             display: flex;
+//             flex-flow: column wrap;
+//             align-items: center;
+//             width: 100%;
+//             overflow-x: hidden;
+//             //flex-direction: column;
+//             // display: grid;
+//             // grid-template-columns: 1fr;
+//             // justify-content: center;
 
-    .servicios-boton {
-        align-self: center;
+//             .tarjeta {
+//                 //position: relative;
+//                 width: 100%;
+//                 max-width: 90%;
+//                 //height: 55vh;
+//                 height: auto;
+//                 //margin: 1rem;
+//                 margin: 0 auto 1rem;
 
 
-        &:hover {
-            background-color: v.$colorSecundario;
-        }
-    }
-}
+//                 .cuerpo.back {
+//                     .link {
+//                         display: none;
+//                     }
+//                 }
+//             }
+//         }
+//     }
