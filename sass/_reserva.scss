@@ -27,6 +27,12 @@
                 @extend %f-row;
                 justify-content: space-around;
                 gap: 1rem;
+
+                elemento-primer-form {
+                    display: flex;
+                    flex-direction: column;
+                    margin: .5rem;
+                }
             }
         }
 
@@ -37,6 +43,7 @@
             font-size: 1.1rem;
         }
 
+
         .datos-pago {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -45,7 +52,7 @@
             margin-bottom: 1rem;
 
             .reserva--datos {
-                
+
                 .parrafo-reserva--seccion {
                     font-size: 1.2rem;
                     color: rgba(0, 0, 0, 0.404);
@@ -90,18 +97,27 @@
         }
     }
 
-    @include v.mobile{
-        .reserva{
+    @include v.mobile {
+        .reserva {
             margin: v.$margin;
             flex-direction: row;
             align-items: center;
 
-            .formulario--reserva{
+            .formulario--reserva {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 0rem;
+
+                .elemento-primer-form {
+                    display: flex;
+                    flex-direction: column;
+                    margin: .5rem;
+                    width: 100%;
+
+                }
             }
 
-            .datos-pago{
+            .datos-pago {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(2, 1fr);
             }

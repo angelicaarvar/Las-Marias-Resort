@@ -41,14 +41,14 @@ main .flash .oferta a .oferta-foto:hover, main .texto-final-testimonios .boton-t
   color: #000000;
 }
 
-.main-reserva .reserva .primer-formulario .formulario--reserva, main .testimonios-tarjetas .seccion-tarjetas, .servicios--tarjetas, header {
+.main-reserva .reserva .primer-formulario .formulario--reserva, main .testimonios-tarjetas .seccion-tarjetas, .servicios--tarjetas .contenedor-tarjetas, header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.main-trabajo .seccion-trabajo .formulario-trabajo, main .texto-final-testimonios .input-opinion, .servicios--tarjetas .tarjeta .cuerpo.back, .descripcion-servicios p, footer {
+.main-trabajo .seccion-trabajo .formulario-trabajo, main .texto-final-testimonios .input-opinion, .servicios--tarjetas, .servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back, .descripcion-servicios p, footer {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
@@ -156,7 +156,17 @@ footer p {
   min-height: 100vh;
   flex-wrap: wrap;
 }
-.servicios--tarjetas .tarjeta {
+.servicios--tarjetas .titulo-servicio {
+  display: flex;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #141d25;
+  margin-top: 1rem;
+}
+.servicios--tarjetas .contenedor-tarjetas {
+  justify-content: center;
+}
+.servicios--tarjetas .contenedor-tarjetas .tarjeta {
   position: relative;
   width: 33vw;
   height: 43vh;
@@ -166,7 +176,7 @@ footer p {
   transform-style: preserve-3d;
   /*Giro de las tarjetas*/
 }
-.servicios--tarjetas .tarjeta .cuerpo {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo {
   position: absolute;
   top: 0;
   /*solapa*/
@@ -179,17 +189,17 @@ footer p {
   overflow: hidden;
   transition: 0.5s;
 }
-.servicios--tarjetas .tarjeta .cuerpo.front {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.front {
   transform: rotateY(0deg);
   box-shadow: 0 5px 10px rgb(14, 27, 99);
 }
-.servicios--tarjetas .tarjeta .cuerpo.front img {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.front img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.servicios--tarjetas .tarjeta .cuerpo.front h3 {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.front h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   position: absolute;
   bottom: 0;
@@ -200,7 +210,7 @@ footer p {
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
 }
-.servicios--tarjetas .tarjeta .cuerpo.back {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back {
   transform: rotateY(180deg);
   background: #141d25;
   padding: 15px;
@@ -209,24 +219,24 @@ footer p {
   text-align: center;
   box-shadow: 0 5px 10px rgb(14, 27, 99);
 }
-.servicios--tarjetas .tarjeta .cuerpo.back .link {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back .link {
   border-top: 1px solid rgb(255, 255, 255);
   height: 50px;
   line-height: 50px;
 }
-.servicios--tarjetas .tarjeta .cuerpo.back .link a {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back .link a {
   color: rgb(255, 255, 255);
   text-decoration: underline;
 }
-.servicios--tarjetas .tarjeta .cuerpo.back p {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta .cuerpo.back p {
   color: rgb(255, 255, 255);
   letter-spacing: 1px;
   padding: 1rem;
 }
-.servicios--tarjetas .tarjeta:hover .cuerpo.front {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta:hover .cuerpo.front {
   transform: rotateY(180deg);
 }
-.servicios--tarjetas .tarjeta:hover .cuerpo.back {
+.servicios--tarjetas .contenedor-tarjetas .tarjeta:hover .cuerpo.back {
   transform: rotateY(0deg);
 }
 @media (max-width: 430px) {
@@ -330,6 +340,11 @@ main .texto-final-testimonios .input-opinion {
   justify-content: space-around;
   gap: 1rem;
 }
+.main-reserva .reserva .primer-formulario .formulario--reserva elemento-primer-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+}
 .main-reserva .reserva select,
 .main-reserva .reserva input,
 .main-reserva .reserva label {
@@ -382,6 +397,13 @@ main .texto-final-testimonios .input-opinion {
   .main-reserva .reserva .formulario--reserva {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0rem;
+  }
+  .main-reserva .reserva .formulario--reserva .elemento-primer-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    width: 100%;
   }
   .main-reserva .reserva .datos-pago {
     grid-template-columns: 1fr;
@@ -448,17 +470,17 @@ main .texto-final-testimonios .input-opinion {
 .main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv {
   width: 100%;
 }
-.main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv .subir-cv--item select,
-.main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv input,
-.main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv label {
+.main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv .subir-cv--item {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
   padding: 1px;
   font-size: 1.1rem;
-  margin: 0.5rem;
 }
 .main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv .curriculum-file {
   background-color: #8fc1fa;
   margin: 0;
-  width: 50%;
+  width: 100%;
   padding: 0.5rem;
 }
 .main-trabajo .seccion-trabajo .formulario-trabajo .subir-cv .cv {
@@ -526,10 +548,14 @@ main .carrouselNosotros {
   position: relative;
   overflow: hidden;
 }
+main .carrouselNosotros .carousel-item .photo-carousel img .foto--carrousel,
 main .carrouselNosotros .carousel .photo-carousel img .foto--carrousel {
   border-radius: 1rem 0 0 1rem;
   height: max-content;
 }
+main .carrouselNosotros .carousel-item .carousel-inner,
+main .carrouselNosotros .carousel-item .carousel-item,
+main .carrouselNosotros .carousel-item .carousel-item img,
 main .carrouselNosotros .carousel .carousel-inner,
 main .carrouselNosotros .carousel .carousel-item,
 main .carrouselNosotros .carousel .carousel-item img {
@@ -584,9 +610,10 @@ main .preguntas-frecuentes .pfq-body {
   text-align: center;
   border-bottom: 1px solid #0d5494;
 }
-main .preguntas-frecuentes .pfq-body h3 {
+main .preguntas-frecuentes .pfq-body h2 {
   text-decoration: underline 1px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.8rem;
 }
 main .preguntas-frecuentes .pfq-preguntas {
   padding: 1rem;
@@ -605,6 +632,7 @@ main .preguntas-frecuentes .pfq-preguntas {
   }
   main .hoteles-trabajo .nav2 {
     width: 90%;
+    gap: 1rem;
   }
 }
 

@@ -71,18 +71,20 @@
             .subir-cv {
                 width: 100%;
 
-                .subir-cv--item select,
-                input,
-                label {
+                .subir-cv--item {
+                    display: flex;
+                    flex-direction: column;
+                    margin: .5rem;
+
                     padding: 1px;
                     font-size: 1.1rem;
-                    margin: .5rem;
+                    
                 }
 
                 .curriculum-file {
                     background-color: #8fc1fa;
                     margin: 0;
-                    width: 50%;
+                    width: 100%;
                     padding: .5rem;
                 }
 
